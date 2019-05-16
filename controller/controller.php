@@ -9,8 +9,8 @@ if (not(empty($_POST))) {
     if(isset($_POST['naam'])){
         echo $_POST['naam'];
     }
-    
-    echo $_POST['naam'];
-    
+    else{
+        echo "Kloojo";
+    }
 }
 
