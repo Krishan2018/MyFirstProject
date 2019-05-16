@@ -5,12 +5,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-if (not(empty($_POST))) {
-    if(isset($_POST['naam'])){
-        echo $_POST['naam'];
-    }
-    else{
-        echo "Kloojo";
-    }
+include_once '../models/Palindroom.php';
+if (!empty($_POST)) {
+    $naam = $_POST["naam"];
+    $palindroom = new Palindroom();
+    
+    $palindroom->revertWord($naam);
 }
 
