@@ -6,7 +6,9 @@
  * and open the template in the editor.
  */
 if (not(empty($_POST))) {
-    
+    if(isset($_POST['naam'])){
+        echo $_POST['naam'];
+    }
     
     echo $_POST['naam'];
     
