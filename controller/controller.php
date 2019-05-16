@@ -6,8 +6,9 @@
  * and open the template in the editor.
  */
 if (not(empty($_POST))) {
+    
+    
     echo $_POST['naam'];
+    
 }
-else {
-    echo "klojo";
-}
+
