@@ -7,9 +7,29 @@
  */
 include_once '../models/Palindroom.php';
 if (!empty($_POST)) {
-    $naam = $_POST["naam"];
-    $palindroom = new Palindroom();
     
-    $palindroom->revertWord($naam);
+    if (checkPostArray()){
+        echo "De inhoud van de Post array klopt - HOERA!";
+    } else {
+        echo "De inhoud van Post array klopt niet.";
+    }  
+}
+
+function checkPostArray(){
+//    bad code axample!!
+//    if(isset($_POST["naam"]) && isset($_POST["submit"])){
+//           return TRUE; 
+//    }
+    $validArguments = array("naam","submit");
+    for ($index = 0 ; $index < sizeof($_POST) ; $index++){
+        $argument = $validArguments($index);
+        if(isset($_POST[$argument])){
+           
+        }
+        else{
+            return FALSE;
+        }
+    }  
+    return TRUE;
 }
 

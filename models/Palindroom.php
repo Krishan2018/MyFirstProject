@@ -8,9 +8,9 @@
 
 //Hierkomen alle functies die te maken hebben met een palindroom
 //Palindroom = woord omdraaien
-$obj = new Palindroom();
-$obj->revertWord("Klas1H");
-echo $obj->getRevertWord();
+//$obj = new Palindroom();
+//$obj->revertWord("Klas1H");
+//echo $obj->getRevertWord();
 
 class Palindroom{
     private $tekst;

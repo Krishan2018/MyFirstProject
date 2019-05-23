@@ -41,7 +41,6 @@ class DbHandler {
             $conn = new PDO($host, $user, $password, $option);
             // Stap 3: Run de sql query
             $stmt = $conn->query($sql);
-            
             // Stap 4: Connect met de database
             if ($stmt->rowCount () == 1){
                 $this->gevonden = True;
