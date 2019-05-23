@@ -9,9 +9,9 @@
  *
  * @author krish
  */
-$woord = "lepel";
-$db = new DbHandler();
-$db->findWoord($woord);
+//$woord = "lepel";
+//$db = new DbHandler();
+//$db->findWoord($woord);
 
 class DbHandler {
     private $woord;
