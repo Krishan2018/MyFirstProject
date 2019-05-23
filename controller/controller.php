@@ -16,7 +16,7 @@ if (!empty($_POST)) {
 }
 
 function checkPostArray(){
-//    bad code axample!!
+//    bad code example!!
 //    if(isset($_POST["naam"]) && isset($_POST["submit"])){
 //           return TRUE; 
 //    }
