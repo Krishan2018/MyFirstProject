@@ -9,7 +9,15 @@ include_once '../models/Palindroom.php';
 if (!empty($_POST)) {
     
     if (checkPostArray()){
-        echo "De inhoud van de Post array klopt - HOERA!";
+        // weet zeker dat de $_POST alle indexen bevat. Ik hoef nooit meet een isset te doen.
+        if( ! strlen ($_POST['naam']) == 0){
+            // 
+            $Palindroom = new Palindroom();
+            $Palindroom->revertWord($_POST['naam']);
+        }else{ 
+            // er is niets ingevuld, maar wel op de knop gedrukt.
+        }
+        
     } else {
         http_response_code(409);
     }  

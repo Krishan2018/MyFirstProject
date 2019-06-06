@@ -28,4 +28,9 @@ class Palindroom{
        function getRevertWord(){
         return $this->revertTekst;
     }
+    function heeftPalidroomBetekenis(){
+        $dbHandler = new DbHandler();
+        $dbHandler->findWoord($this->revertTekst);
+        return $dbHandler->isWoordGevonden();
+    }
 }
