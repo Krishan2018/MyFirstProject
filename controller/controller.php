@@ -11,8 +11,11 @@ if (!empty($_POST)) {
     if (checkPostArray()){
         echo "De inhoud van de Post array klopt - HOERA!";
     } else {
-        echo "De inhoud van Post array klopt niet.";
+        http_response_code(409);
     }  
+}
+else{
+    http_response_code(406);
 }
 
 function checkPostArray(){
@@ -22,12 +25,9 @@ function checkPostArray(){
 //    }
     $validArguments = array("naam","submit");
     for ($index = 0 ; $index < sizeof($_POST) ; $index++){
-        $argument = $validArguments($index);
-        if(isset($_POST[$argument])){
-           
-        }
-        else{
-            return FALSE;
+        $argument = $validArguments[$index];
+        if( ! isset($_POST[$argument])){
+            return FALSE;   
         }
     }  
     return TRUE;
