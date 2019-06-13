@@ -6,12 +6,7 @@
  * and open the template in the editor.
  */
 
-//Hierkomen alle functies die te maken hebben met een palindroom
-//Palindroom = woord omdraaien
-//$obj = new Palindroom();
-//$obj->revertWord("Klas1H");
-//echo $obj->getRevertWord();
-
+include_once '../intergration/DbHandler.php';
 class Palindroom{
     private $tekst;
     private $revertTekst;

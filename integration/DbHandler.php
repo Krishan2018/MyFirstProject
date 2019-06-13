@@ -9,9 +9,6 @@
  *
  * @author krish
  */
-//$woord = "lepel";
-//$db = new DbHandler();
-//$db->findWoord($woord);
 include_once '_config.php';
 
 class DbHandler {
@@ -37,7 +34,7 @@ class DbHandler {
         $sql = "SELECT * FROM palindromen WHERE woord= '".$woord."';";
         try{
             //Stap 2: Connect met de database 
-            $conn = new PDO($host, $user, $password, $option);
+            $conn = new PDO($host, user, password, $option);
             // Stap 3: Run de sql query
             $stmt = $conn->query($sql);
             // Stap 4: Connect met de database

@@ -49,10 +49,6 @@ else{
 }
 
 function checkPostArray(){
-//    bad code example!!
-//    if(isset($_POST["naam"]) && isset($_POST["submit"])){
-//           return TRUE; 
-//    }
     $validArguments = array("naam","submit");
     for ($index = 0 ; $index < sizeof($_POST) ; $index++){
         $argument = $validArguments[$index];
