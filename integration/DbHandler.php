@@ -12,6 +12,7 @@
 //$woord = "lepel";
 //$db = new DbHandler();
 //$db->findWoord($woord);
+include_once '_config.php';
 
 class DbHandler {
     private $woord;
@@ -29,9 +30,7 @@ class DbHandler {
         
         $adres = '127.0.0.1';
         $charset = 'utf8mb4';
-        $db = 'palindroom';
-        $user = "root";
-        $password = "";   
+        $db = 'palindroom'; 
         
         $host = "mysql:host=$adres;dbname=$db;charset=$charset";  
         
