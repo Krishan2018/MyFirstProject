@@ -14,8 +14,30 @@ if (!empty($_POST)) {
             // 
             $Palindroom = new Palindroom();
             $Palindroom->revertWord($_POST['naam']);
+            $revertWord = $Palindroom->getRevertWord();
+            if ($Palindroom->heeftPalidroomBetekenis()){
+                $viewData = array(
+                    'palindroom' => "Het omgekeerde woord is: ". $revertWord, 
+                    'message' => "Het omgedraaide woord heeft een betekenis",
+                    'action' => "Vul een nieuw woord in of sluit de browser"           
+                );
+            }
+            else{               
+                $viewData = array(
+                    'palindroom' => "",
+                    'message' => "Het omgedraaide woord heeft een betekenis",
+                    'action' => "Vul een nieuw woord in of sluit de browser"           
+                );
+            }
+            include_once '../view/view.php';
+            
         }else{ 
-            // er is niets ingevuld, maar wel op de knop gedrukt.
+                $viewData = array(
+                    'palindroom' => "Het omgekeerde woord is: ". $revertWord, 
+                    'message' => "Het omgedraaide woord heeft een betekenis",
+                    'action' => "Vul een nieuw woord in of sluit de browser"           
+                );
+            include_once '../view/view.php';
         }
         
     } else {
