@@ -24,7 +24,7 @@ if (!empty($_POST)) {
             }
             else{               
                 $viewData = array(
-                    'palindroom' => "",
+                    'palindroom' => "Het omgekeerde woord is: ". $revertWord,
                     'message' => "Het omgedraaide woord heeft een betekenis",
                     'action' => "Vul een nieuw woord in of sluit de browser"           
                 );
