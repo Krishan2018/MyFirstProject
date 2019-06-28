@@ -1,31 +1,29 @@
 <?php
+//Hier komen alle functies die te maken hebben met een palindroom
+// Palindroom = woord omdraaien
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+include_once '../Integration/DbHandler.php';
 
-include_once '../intergration/DbHandler.php';
 class Palindroom{
     private $tekst;
     private $revertTekst;
             
-    function revertWord($tekst){
-        $this->tekst = $tekst;
+            function revertWord($tekst){
+                $this->tekst = $tekst;
         $revertTekst = "";
-        //We gebruiken een for omdat we de rangeomvang kennen.
-        for ($index = strlen($tekst) -1 ; $index > -1 ; $index --){
-            $revertTekst = $revertTekst . $tekst[$index];
-        }  
+        //we gebruiken een for loop omdat we de range kennen.
+        for ($index = strlen($tekst) -1; $index > -1; $index--){
+          $revertTekst = $revertTekst . $tekst[$index];
+        }
         $this->revertTekst = $revertTekst;
     }
-       function getRevertWord(){
+    
+    function getRevertWord(){
         return $this->revertTekst;
     }
-    function heeftPalidroomBetekenis(){
-        $dbHandler = new DbHandler();
-        $dbHandler->findWoord($this->revertTekst);
-        return $dbHandler->isWoordGevonden();
+    function heeftPalindroomBetekenis(){
+      $dbHandler = new DbHandler(); 
+      $dbHandler->findWoord($this->revertTekst);
+      return $dbHandler->isWoordGevonden();
     }
 }

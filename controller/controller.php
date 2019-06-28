@@ -15,7 +15,7 @@ if (!empty($_POST)) {
             $Palindroom = new Palindroom();
             $Palindroom->revertWord($_POST['naam']);
             $revertWord = $Palindroom->getRevertWord();
-            if ($Palindroom->heeftPalidroomBetekenis()){
+            if ($Palindroom->heeftPalindroomBetekenis()){
                 $viewData = array(
                     'palindroom' => "Het omgekeerde woord is: ". $revertWord, 
                     'message' => "Het omgedraaide woord heeft een betekenis",

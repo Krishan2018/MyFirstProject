@@ -10,10 +10,10 @@
             <input type="text" name="naam" >
             <input type="submit" name="submit" value="Submit"/>
         </form>
-        
+        </p>
         <?php
-        echo $viewData['palindroom'];
-        echo $viewData['message'];
+        echo $viewData['palindroom']."<br />";
+        echo $viewData['message']."<br />";
         echo $viewData['action'];
         ?>
     </body>
