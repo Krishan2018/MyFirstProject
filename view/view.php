@@ -5,10 +5,10 @@
         <title>MyFistProject</title>
     </head>
     <body>
-        <form method="post" action="controller/controller.php">
+        <form method="post" action="http://localhost/MyFirstProject/controller/controller.php">
             <label> Voer een tekst in <br /></label>
             <input type="text" name="naam" >
-            <input type="submit" name="submit" value="Submit"/>
+            <input type="submit" name="submit" value="Verzenden"/>
         </form>
         </p>
         <?php
